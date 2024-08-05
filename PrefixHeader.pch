@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  openCvApp
+//
+//  Created by Apple on 01/08/24.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __cplusplus
+#include <opencv2/opencv.hpp>
+#include <opencv2/tracking.hpp>
+#include <opencv2/imgcodecs/ios.h>
+#endif
+
+//using namespace cv;
+
+#endif /* PrefixHeader_pch */
