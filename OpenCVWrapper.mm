@@ -15,6 +15,7 @@
 @interface OpenCVWrapper()
 
 @property (nonatomic) cv::Ptr<cv::Tracker> mTracker;
+//@property (nonatomic) std::list<T> mTrackerList;
 
 @end
 
@@ -26,6 +27,7 @@
 
 - (void) createTracker{
     _mTracker = cv::TrackerMedianFlow::create();
+//    _mTrackerList.append()
 }
 
 
@@ -78,7 +80,7 @@ cv::Mat pixelBufferToMat(CVPixelBufferRef pixelBuffer) {
     
 //     Convert BGRA to BGR (if needed)
     cv::Mat bgrMat;
-    cv::cvtColor(mat, bgrMat, cv::COLOR_BGRA2BGR);
+    cv::cvtColor(mat, bgrMat, cv::COLOR_BGRA2GRAY);
     
     return bgrMat;
 }
